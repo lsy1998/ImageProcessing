@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas width="959" height="234" id='myCanvas'></canvas>
+</body>
+<script>
+
+    var canvas = document.getElementById('myCanvas')
+    var ctx = canvas.getContext('2d')
+    var img = new Image();
+
+    img.src = "./loginBackground.jpg";
+
+    img.onload = function () {
+        // 等待图片加载完毕后再执行绘制
+        ctx.drawImage(img,10,10);
+    }
+</script>
+
+</html>
